@@ -1,0 +1,27 @@
+{
+  "name": "SvelteComponent",
+  "type": "module",
+  "svelte": "src/index.js",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "pnpm build",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "rimraf": "^5.0.0",
+    "rollup": "^3.21.6",
+    "rollup-plugin-svelte": "^7.1.4",
+    "svelte": "^3.59.1",
+    "typescript": "^5.0.4"
+  },
+  "keywords": [
+    "svelte"
+  ],
+  "files": [
+    "src",
+    "dist"
+  ]
+}
