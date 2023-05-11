@@ -8,9 +8,9 @@ const name = pkg.name
 	.replace(/-\w/g, m => m[1].toUpperCase());
 
 export default {
-	input: 'src/index.js',
+	input: 'src/index.ts',
 	output: [
-		{ file: pkg.module, 'format': 'es' },
+		{ file: pkg.module, 'format': 'es', name },
 		{ file: pkg.main, 'format': 'umd', name }
 	],
 	plugins: [
