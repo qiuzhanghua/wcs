@@ -1,5 +1,6 @@
 {
   "name": "SvelteComponent",
+  "version": "0.0.1",
   "type": "module",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
