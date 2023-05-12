@@ -6,8 +6,8 @@ import sveltePreprocess from 'svelte-preprocess';
 export default {
 	input: 'src/index.ts',
 	output: [
-		{sourcemap: true, file: "dist/index.es.js", 'format': 'es', name: "my-card"},
-		{sourcemap: true,  file: "dist/index.umd.js", 'format': 'umd', name : "my-card"}
+		{file: "dist/index.es.js", 'format': 'es', name: "my-card"},
+		{file: "dist/index.umd.js", 'format': 'umd', name : "my-card"}
 	],
 	plugins: [
 		svelte({
@@ -16,7 +16,7 @@ export default {
 				customElement: true
 			}
 		}),
-		typescript({declaration: true, declarationDir: "dist/types"}),
+		typescript(),
 		resolve()
 	]
 };
