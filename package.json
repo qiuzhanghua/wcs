@@ -1,6 +1,6 @@
 {
-  "name": "my-card",
-  "version": "0.0.1",
+  "name": "@qiuzhanghua/my-card",
+  "version": "0.0.2",
   "type": "module",
   "svelte": "src/index.ts",
   "module": "dist/index.es.js",
