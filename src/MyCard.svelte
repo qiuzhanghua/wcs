@@ -5,8 +5,8 @@
 </div>
 
 <script lang="ts">
-	export let name
-	export let self
+	export let name = 'svelte'
+	export let self: HTMLDivElement
 	function sayMyName() {
 		alert(name)
 		// 呼唤结束，你还可以自定义事件，冒泡向上层传递信息
