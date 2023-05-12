@@ -1,4 +1,4 @@
-<svelte:options tag="info-card" />
+<svelte:options tag="my-card" />
 <div id="app" bind:this={self}>
 	<h1 class="name">{name}</h1>
 	<button on:click={sayMyName}>呼唤我的名字</button>

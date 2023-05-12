@@ -1,6 +1,7 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import pkg  from './package.json' assert { type: 'json' };
+import typescript from '@rollup/plugin-typescript';
 
 const name = pkg.name
 	.replace(/^(@\S+\/)?(svelte-)?(\S+)/, '$3')
@@ -10,8 +11,8 @@ const name = pkg.name
 export default {
 	input: 'src/index.ts',
 	output: [
-		{ file: pkg.module, 'format': 'es', name },
-		{ file: pkg.main, 'format': 'umd', name }
+		{ file: "dist/index.es.js", 'format': 'es', name: "my-card"},
+		{ file: "dist/index.umd.js", 'format': 'umd', name : "my-card"}
 	],
 	plugins: [
 		svelte({
@@ -19,6 +20,7 @@ export default {
 				customElement: true
 			}
 		}),
+		typescript(),
 		resolve()
 	]
 };

@@ -11,5 +11,6 @@ pnpm build
 
 ## Running the app
 ```bash
-open index.html
+http-server -c-1
 ```
+and visit http://localhost:8080
